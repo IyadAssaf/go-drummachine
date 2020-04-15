@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/IyadAssaf/go-drumachine/pkg/drummachine"
+	"github.com/IyadAssaf/go-drummachine/pkg/drummachine"
 	"github.com/urfave/cli"
 	"log"
 	"os"

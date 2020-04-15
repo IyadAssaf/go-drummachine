@@ -2,7 +2,7 @@ package drummachine
 
 import (
 	"context"
-	"github.com/IyadAssaf/go-drumachine/pkg/midi"
+	"github.com/IyadAssaf/go-drummachine/pkg/midi"
 	"github.com/k0kubun/go-keybind"
 )
 

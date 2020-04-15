@@ -1,8 +1,8 @@
 package nineohnine
 
 import (
-	"github.com/IyadAssaf/go-drumachine/pkg/midi"
-	"github.com/IyadAssaf/go-drumachine/pkg/support"
+	"github.com/IyadAssaf/go-drummachine/pkg/midi"
+	"github.com/IyadAssaf/go-drummachine/pkg/support"
 	ui "github.com/gizak/termui/v3"
 	"github.com/gizak/termui/v3/widgets"
 )

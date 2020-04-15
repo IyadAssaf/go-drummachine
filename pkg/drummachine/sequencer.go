@@ -1,13 +1,14 @@
 package drummachine
 
 import (
+	"context"
 	"fmt"
-	"github.com/IyadAssaf/go-drumachine/pkg/midi"
-	"github.com/form3tech/f3/pkg/plugin"
 	"time"
+
+	"github.com/IyadAssaf/go-drummachine/pkg/midi"
 )
 
-func (s *Synth) SetupSequencer(ctx *plugin.RunContext) error {
+func (s *Synth) SetupSequencer(ctx context.Context) error {
 
 	hhClosed := s.HighHatClosed()
 	kick := s.Kick()
@@ -18,7 +19,7 @@ func (s *Synth) SetupSequencer(ctx *plugin.RunContext) error {
 	}
 	pattern.Notes = make(map[int][]*midi.NoteMessage)
 
-	for i := 0; i< pattern.Beats; i++ {
+	for i := 0; i < pattern.Beats; i++ {
 		pattern.Notes[i] = make([]*midi.NoteMessage, 0)
 	}
 
@@ -42,7 +43,7 @@ type SequencerPattern struct {
 	Notes map[int][]*midi.NoteMessage
 }
 
-func (s *Synth) scheduleSequencerPattern(ctx *plugin.RunContext, pattern *SequencerPattern) error {
+func (s *Synth) scheduleSequencerPattern(ctx context.Context, pattern *SequencerPattern) error {
 
 	tempo := 120
 
@@ -65,7 +66,7 @@ func (s *Synth) scheduleSequencerPattern(ctx *plugin.RunContext, pattern *Sequen
 	return nil
 }
 
-func (s *Synth) applyPattern(ctx *plugin.RunContext, tempo int, pattern *SequencerPattern, t time.Duration) time.Duration {
+func (s *Synth) applyPattern(ctx context.Context, tempo int, pattern *SequencerPattern, t time.Duration) time.Duration {
 
 	fmt.Println("applying pattern with time", t)
 	tickSize := time.Minute / time.Duration(tempo)

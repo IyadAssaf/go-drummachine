@@ -1,9 +1,9 @@
 package drummachine
 
 import (
-	eightoheight "github.com/IyadAssaf/go-drumachine/pkg/drummachine/kits/808"
-	nineohnine "github.com/IyadAssaf/go-drumachine/pkg/drummachine/kits/909"
-	"github.com/IyadAssaf/go-drumachine/pkg/midi"
+	eightoheight "github.com/IyadAssaf/go-drummachine/pkg/drummachine/kits/808"
+	nineohnine "github.com/IyadAssaf/go-drummachine/pkg/drummachine/kits/909"
+	"github.com/IyadAssaf/go-drummachine/pkg/midi"
 )
 
 type Kit interface {
