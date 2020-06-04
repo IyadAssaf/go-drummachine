@@ -4,7 +4,7 @@ A drum machine written in Go making use of fluidsynth
 
 ## Installation
 
-Install `fluidsynth` beefore building the project:
+Install `fluidsynth` before building the project:
 - osx: `brew install fluidsynth`
 - ubuntu: `apt-get install fluidsynth`
 
